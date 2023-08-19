@@ -18,7 +18,7 @@ export const VsCode = ()=>{
     <div
       className="vscodeWn floatTab dpShad" data-size={wnapp.size}
       data-max={wnapp.max} style={{
-        ...(wnapp.size=="cstm"?wnapp.dim:null),
+        ...(wnapp.size==="cstm"?wnapp.dim:null),
         zIndex: wnapp.z
       }} data-hide={wnapp.hide} id={wnapp.icon+"App"}>
       <ToolBar app={wnapp.action} icon={wnapp.icon}

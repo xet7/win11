@@ -7,17 +7,17 @@ export const IFrame = (props)=>{
   const apps = useSelector(state => state.apps);
   const wnapp = useSelector(state => state.apps[props.icon]);
   const dispatch = useDispatch();
-  const data = appdata.filter(x=> x.icon == wnapp.icon)[0].data || {};
+  const data = appdata.filter(x=> x.icon === wnapp.icon)[0].data || {};
 
   return wnapp.hide?null:(
     <div data-size={wnapp.size} className={"floatTab dpShad " +
-      (data.invert!=true?"lightWindow":"darkWindow")
+      (data.invert!==true?"lightWindow":"darkWindow")
     } data-max={wnapp.max} style={{
-        ...(wnapp.size=="cstm"?wnapp.dim:null),
+        ...(wnapp.size==="cstm"?wnapp.dim:null),
         zIndex: wnapp.z
       }} data-hide={wnapp.hide} id={wnapp.icon+"App"}>
       <ToolBar app={wnapp.action} icon={wnapp.icon}
-        name={wnapp.name} invert={data.invert==true?true:null}/>
+        name={wnapp.name} invert={data.invert===true?true:null}/>
       <div className="windowScreen flex flex-col" data-dock="true">
         <div className="restWindow flex-grow flex flex-col">
           <div className="flex-grow overflow-hidden">

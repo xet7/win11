@@ -26,9 +26,9 @@ export const WhiteBoard = ()=>{
 
   const action = (e)=>{
     var act = e.target.getAttribute("value");
-    if(act=="erz"){
+    if(act==="erz"){
       setErz(true);
-    }else if (act=="rst") {
+    }else if (act==="rst") {
       setErz(false);
       setColor("#222");
       setRst(true);
@@ -45,7 +45,7 @@ export const WhiteBoard = ()=>{
     <div
       className="whiteBoard floatTab dpShad" data-size={wnapp.size}
       data-max={wnapp.max} style={{
-        ...(wnapp.size=="cstm"?wnapp.dim:null),
+        ...(wnapp.size==="cstm"?wnapp.dim:null),
         zIndex: wnapp.z
       }} data-hide={wnapp.hide} id={wnapp.icon+"App"}>
       <ToolBar app={wnapp.action} icon={wnapp.icon}
@@ -55,14 +55,14 @@ export const WhiteBoard = ()=>{
           <div className="clickCont">
             <div className="paintTool">
               {tools.map(tool=>{
-                if(tool=="erazer"){
+                if(tool==="erazer"){
                   return (
                     <div className="ptool prtclk" onClick={action}
                       value="erz" data-active={eraze}>
                       <Image src="icon/ui/marker"/>
                     </div>
                   )
-                }else if(tool=="reset"){
+                }else if(tool==="reset"){
                   return (
                     <div className="ptool prtclk" onClick={action} value="rst">
                       <Image src="icon/ui/dustbin"/>
@@ -71,7 +71,7 @@ export const WhiteBoard = ()=>{
                 }else{
                   return (
                     <div className="ptool prtclk" onClick={action}
-                      data-active={color==tool && !eraze} value={tool}>
+                      data-active={color===tool && !eraze} value={tool}>
                       <Mark color={tool}/>
                     </div>
                   )

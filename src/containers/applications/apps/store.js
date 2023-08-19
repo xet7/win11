@@ -35,14 +35,14 @@ export const MicroStore = ()=>{
     <div
       className="wnstore floatTab dpShad" data-size={wnapp.size}
       data-max={wnapp.max} style={{
-       ...(wnapp.size=="cstm"?wnapp.dim:null),
+       ...(wnapp.size==="cstm"?wnapp.dim:null),
        zIndex: wnapp.z
      }} data-hide={wnapp.hide} id={wnapp.icon+"App"}>
       <ToolBar app={wnapp.action} icon={wnapp.icon}
         name="Microsoft Store"/>
       <div className="windowScreen flex">
         <div className="storeNav h-full w-16 flex flex-col">
-          <Icon fafa="faHome" onClick={action} click="sthome" width={20} payload={tab=="sthome"}/>
+          <Icon fafa="faHome" onClick={action} click="sthome" width={20} payload={tab==="sthome"}/>
           <Icon fafa="faThLarge" onClick={action} click="apprib" width={18} payload={tab=="apprib"}/>
           <Icon fafa="faGamepad" onClick={action} click="gamerib" width={20} payload={tab=="gamerib"}/>
           <Icon fafa="faFilm" onClick={action} click="movrib" width={20} payload={tab=="movrib"}/>

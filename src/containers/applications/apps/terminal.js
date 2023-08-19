@@ -20,17 +20,17 @@ export const WnTerminal = ()=>{
 
   const dirFolders = (isFile="")=>{
     var tdir = {...dirs},
-    curr = pwd=="C:\\"?[]:pwd.replace("C:\\","").split("\\");
+    curr = pwd==="C:\\"?[]:pwd.replace("C:\\","").split("\\");
 
 
-    if(pwd!="C:\\"){
+    if(pwd!=="C:\\"){
       for (var i = 0; i < curr.length; i++) {
         console.log(tdir);
         tdir = tdir[curr[i]];
       }
     }
 
-    if(isFile==""){
+    if(isFile===""){
       return Object.keys(tdir);
     }else{
       return tdir[isFile] || {};
@@ -45,16 +45,16 @@ export const WnTerminal = ()=>{
 
     arg = arg.trim();
 
-    if(type=="echo"){
+    if(type==="echo"){
       if(arg.length){
         tmpStack.push(arg);
       }else{
         tmpStack.push("ECHO is on.");
       }
-    }else if(type=="cd"){
+    }else if(type==="cd"){
       if(arg.length){
         var errp = true;
-        var curr = pwd=="C:\\"?[]:pwd.replace("C:\\","").split("\\");
+        var curr = pwd==="C:\\"?[]:pwd.replace("C:\\","").split("\\");
 
         if(arg=="."){
           errp = false;
@@ -84,7 +84,7 @@ export const WnTerminal = ()=>{
       }else{
         tmpStack.push(pwd);
       }
-    }else if (type=="dir") {
+    }else if (type==="dir") {
       tmpStack.push(" Directory of "+pwd);
       tmpStack.push("");
       tmpStack.push("<DIR>    .")
@@ -98,16 +98,16 @@ export const WnTerminal = ()=>{
           tmpStack.push("FILE...."+tdir[i])
         }
       }
-    }else if (type=="cls") {
+    }else if (type==="cls") {
       tmpStack = [];
-    }else if (type=="type") {
+    }else if (type==="type") {
       var errp = true;
 
       if(arg.includes(".")){
         var tdir = dirFolders();
 
         for (var i = 0; i < tdir.length; i++) {
-          if(arg==tdir[i] && errp){
+          if(arg===tdir[i] && errp){
             errp = false;
             var file = dirFolders(tdir[i]);
             var content = file.content || "";
@@ -123,31 +123,31 @@ export const WnTerminal = ()=>{
       if(errp){
         tmpStack.push("The system cannot find the file specified.");
       }
-    }else if (type=="start") {
+    }else if (type==="start") {
       dispatch({type: "EDGELINK", payload: arg});
-    }else if (type=="date") {
+    }else if (type==="date") {
       tmpStack.push("The current date is: " + new Date().toLocaleDateString());
-    }else if (type=="time") {
+    }else if (type==="time") {
       tmpStack.push("The current time is: " +
               new Date().toLocaleTimeString("en-GB",{
                 hour: '2-digit',
                 minute: '2-digit',
                 second: '2-digit'}).replaceAll(":",".") + "." +
               Math.floor(Math.random()*100));
-    }else if (type=="exit") {
+    }else if (type==="exit") {
       tmpStack = [
         "Microsoft Windows [Version 10.0.22000.51]",
         "(c) Microsoft Corporation. All rights reserved.",
         ""
       ];
       dispatch({type: wnapp.action, payload: "close"})
-    }else if (type=="title") {
+    }else if (type==="title") {
       setWntitle(arg.length?arg:"Windows Terminal");
-    }else if (type=="hostname") {
+    }else if (type==="hostname") {
       tmpStack.push("Blue");
-    }else if (type=="ver") {
+    }else if (type==="ver") {
       tmpStack.push("Microsoft Windows [Version 10.0.22000.51]");
-    }else if (type=="systeminfo") {
+    }else if (type==="systeminfo") {
       var dvInfo = [
         "Host Name:                 BLUE",
         "OS Name:                   Microsoft Windows 11 Home Single Language",
@@ -163,7 +163,7 @@ export const WnTerminal = ()=>{
       for (var i = 0; i < dvInfo.length; i++) {
         tmpStack.push(dvInfo[i]);
       }
-    }else if (type=="help") {
+    }else if (type==="help") {
       var helpArr = [
         "CD             Displays the name of or changes the current directory.",
         "CLS            Clears the screen.",
@@ -183,7 +183,7 @@ export const WnTerminal = ()=>{
       for (var i = 0; i < helpArr.length; i++) {
         tmpStack.push(helpArr[i]);
       }
-    }else if (type=="") {
+    }else if (type==="") {
 
     }else{
       tmpStack.push(`'${type}' is not recognized as an internal or external command,`);
@@ -201,24 +201,24 @@ export const WnTerminal = ()=>{
     var action = event.target.dataset.action;
 
     if(cmdline){
-      if(action=="hover"){
+      if(action==="hover"){
         var crline = cmdline.parentNode;
         var cmdcont = document.getElementById('cmdcont');
         if(crline && cmdcont){
           cmdcont.scrollTop = crline.offsetTop;
         }
         cmdline.focus();
-      }else if (action=="enter") {
-        if(event.key=="Enter"){
+      }else if (action==="enter") {
+        if(event.key==="Enter"){
           event.preventDefault();
           var tmpStack = [...stack];
           var cmd = event.target.innerText.trim();
           event.target.innerText = "";
           setLsc(tmpStack.length+1);
           cmdTool(cmd);
-        }else if (event.key=="ArrowUp" || event.key=="ArrowDown") {
+        }else if (event.key==="ArrowUp" || event.key==="ArrowDown") {
           event.preventDefault();
-          var i = lastCmd + [1,-1][Number(event.key=="ArrowUp")];
+          var i = lastCmd + [1,-1][Number(event.key==="ArrowUp")];
 
           while( i>=0 && i<stack.length){
             if(stack[i].startsWith("C:\\") && stack[i].includes(">")){
@@ -228,11 +228,11 @@ export const WnTerminal = ()=>{
               break;
             }
 
-            i+=[1,-1][Number(event.key=="ArrowUp")];
+            i+=[1,-1][Number(event.key==="ArrowUp")];
           }
 
           cmdline.focus();
-        }else if(event.key=="Tab"){
+        }else if(event.key==="Tab"){
           event.preventDefault();
           var cmd = event.target.innerText.trim(),
             arr = cmd.split(" ");
@@ -263,7 +263,7 @@ export const WnTerminal = ()=>{
     <div
       className="wnterm floatTab dpShad" data-size={wnapp.size}
       data-max={wnapp.max} style={{
-       ...(wnapp.size=="cstm"?wnapp.dim:null),
+       ...(wnapp.size==="cstm"?wnapp.dim:null),
        zIndex: wnapp.z
        }} data-hide={wnapp.hide} id={wnapp.icon+"App"}>
       <ToolBar app={wnapp.action} icon={wnapp.icon}
