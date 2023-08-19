@@ -55,7 +55,7 @@ export const MicroStore = ()=>{
               <div className="storeRibbon">
                 {ribbon && ribbon.map(x=>{
                   return x=="unescape"?(
-                    <a href="https://blueedge.me/unescape" target="_blank">
+                    <a href="http://localhost:3000/unescape" target="_blank">
                     <Image className="mx-1 dpShad rounded overflow-hidden"
                       var={x} h={100} dir="store/float" src={x}/>
                     </a>

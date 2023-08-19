@@ -214,7 +214,7 @@ export const StartMenu = () => {
         <div className="menuBar">
           <div className="profile handcr">
             <Icon src="blueProf" ui rounded width={26}
-              click="EXTERNAL" payload="https://blueedge.me"/>
+              click="EXTERNAL" payload="http://localhost:3000"/>
             <div className="usName">Blue Edge</div>
           </div>
           <div className="relative">

@@ -43,12 +43,12 @@ export const AboutWin = ()=>{
             <br/>
             <br/>
             <div>
-              This product is licensed with <a target="_blank" href="https://github.com/blueedgetechno/windows11/blob/master/LICENSE">Creative Commons</a>.
+              This product is licensed with <a target="_blank" href="https://github.com/xet7/win11/blob/master/LICENSE">MIT license</a>.
             </div>
             <div className="mt-1">
               &nbsp;&nbsp;
               &nbsp;&nbsp;
-              contact: <a target="_blank" href="mailto:blueedgetechno@gmail.com">blueedgetechno@gmail.com</a>
+              contact: <a target="_blank" href="mailto:x@xet7.org">x@xet7.org</a>
             </div>
             <br/>
             <br/>

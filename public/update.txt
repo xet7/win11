@@ -1,8 +1,8 @@
 1.6
-https://github.com/blueedgetechno/windows11/releases/download/v0.1-alpha/win11.exe
+https://github.com/xet7/win11/releases/download/v0.1-alpha/win11.exe
 
 
 [Update]
 Version=1.6
-URL=https://github.com/blueedgetechno/windows11/releases/download/v0.1-alpha/win11.exe
+URL=https://github.com/xet7/win11/releases/download/v0.1-alpha/win11.exe
 

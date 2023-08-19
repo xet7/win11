@@ -116,7 +116,7 @@ export default [
   icon: 'mail',
   type: 'app',
   action: 'EXTERNAL',
-  payload: 'mailto:blueedgetechno@gmail.com'
+  payload: 'mailto:x@xet7.org'
 },
 {
   name: 'Maps',
@@ -237,7 +237,7 @@ export default [
   icon: 'twitter',
   type: 'app',
   action: 'EXTERNAL',
-  payload: 'https://twitter.com/blueedgetechno'
+  payload: 'https://twitter.com/xet7'
 },
 {
   name: 'Teams',
@@ -291,14 +291,14 @@ export default [
   icon: 'github',
   type: 'app',
   action: 'EXTERNAL',
-  payload: 'https://github.com/blueedgetechno/windows11'
+  payload: 'https://github.com/xet7/win11'
 },
 {
   name: 'Unescape',
   icon: 'unescape',
   type: 'action',
   action: 'EXTERNAL',
-  payload: 'https://blueedge.me/unescape'
+  payload: 'https://localhost:3000'
 },
 {
   name: 'Discord',

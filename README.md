@@ -1,12 +1,8 @@
 # Windows 11 in React!
 
-[![Follow me](https://img.shields.io/github/followers/blueedgetechno?label=follow%20me&style=social)](https://github.com/blueedgetechno)
-[![Follow Twitter](https://img.shields.io/twitter/follow/blueedgetechno?label=Follow%20me&style=social)](https://twitter.com/blueedgetechno)
-[![Join](https://img.shields.io/discord/868499076432408627.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/qmEZwUhb4b)
-[![Build](https://github.com/blueedgetechno/windows11/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/blueedgetechno/windows11/actions/workflows/deploy.yml)
-This open source project is made in the hope to replicate the Windows 11 desktop experience on web, using standard web technologies like React, CSS (SCSS), and Js.
-
- #### Live Experience🌈: [win11.blueedge.me](https://win11.blueedge.me)
+This open source project is made in the hope to replicate
+the Windows 11 desktop experience on web,
+using standard web technologies like React, CSS (SCSS), and Js.
 
 ![home](./public/img/home.png)
 
@@ -19,7 +15,9 @@ This open source project is made in the hope to replicate the Windows 11 desktop
 
 # Why
 
-WHY NOT? Why not just waste a week of your life creating a react project just to coverup your insecurities of how incompetent you are. Just Why not!
+WHY NOT? Why not just waste a week of your life
+creating a react project just to coverup
+your insecurities of how incompetent you are. Just Why not!
 
 # Features
 - [x] Start Menu, Search Menu and Widgets
@@ -33,11 +31,11 @@ WHY NOT? Why not just waste a week of your life creating a react project just to
 - [ ] Startup and Lock screen
 - [ ] Themes and Background
 
-📑 [suggest more](https://github.com/blueedgetechno/windows11/issues/new/choose)
+📑 [suggest more](https://github.com/xet7/win11/issues/new/choose)
 
 # Stack
 
-- Framework - React (^17.0.2) + Redux
+- Framework - React + Redux
 - Component/UI Library - None!!
 - Styling Solution - SCSS and CSS Modules (tailwind).
 - Icons - fontawesome
@@ -53,7 +51,7 @@ WHY NOT? Why not just waste a week of your life creating a react project just to
 
 
 - Can I contribute?
-  - Yes, you can! Open an issue, create a pull request, head over to [discussions](https://github.com/blueedgetechno/windows11/discussions) or join the [discord](https://discord.gg/qmEZwUhb4b).
+  - Yes, you can! Open an issue, create a pull request, head over to [discussions](https://github.com/xet7/win11/discussions).
 
 
 - Where did you get the inspiration from, if you have?
@@ -64,18 +62,22 @@ WHY NOT? Why not just waste a week of your life creating a react project just to
   - 42
 
     ![answer](./public/answer.png)
+
 ## Docker
 
-To use docker use the following command ``` docker run -d  --restart unless-stopped --name windows11 -p 3000:3000 ghcr.io/blueedgetechno/windows11:master ```
+```
+git clone https://github.com/xet7/win11
+
+cd win11
+
+./start.sh
+```
+Browse to http://localhost:3000
+
 
 ## Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-## Contributors
-<a href="https://github.com/blueedgetechno/windows11/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=blueedgetechno/windows11" />
-</a>
 
 ### Known Issues
 
@@ -85,7 +87,3 @@ To use docker use the following command ``` docker run -d  --restart unless-stop
 
 1. Open `about:config` in your firefox browser.
 2. Search for `layout.css.backdrop-filter.enabled` and set it to `true`.
-
-## License
-
-⚖️ CC0-1.0 License

@@ -10,7 +10,7 @@ export const VsCode = ()=>{
 
   useEffect(()=>{
     if(url==null){
-      setUrl(process.env.REACT_APP_VSCODE|| "https://github1s.com/blueedgetechno/blueweb")
+      setUrl(process.env.REACT_APP_VSCODE|| "https://github.com/xet7/win11")
     }
   })
 
