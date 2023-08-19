@@ -44,7 +44,7 @@ your insecurities of how incompetent you are. Just Why not!
 
 - How long it took?
   - From blueedgetechno: Honestly It took 2-3 days collecting assets, 2-3 planning and about 6 days programming it.
-
+  - From xet7: Some hours for updates etc during 2 days https://github.com/xet7/win11/blob/main/CHANGELOG.md
 
 - Did you use any UI/Library?
   - No.
