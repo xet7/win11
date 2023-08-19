@@ -28,7 +28,7 @@ const taskReducer = (state = defState, action) => {
       };
     case 'TASKTOG':
       return {
-        ...state, align: state.align == 'left' ? 'center' : 'left'
+        ...state, align: state.align === 'left' ? 'center' : 'left'
       };
     case 'TASKPSHOW':
       return {
@@ -42,11 +42,11 @@ const taskReducer = (state = defState, action) => {
       };
     case 'TASKSRCH':
       return {
-        ...state, search: action.payload=="true"
+        ...state, search: action.payload==="true"
       };
     case 'TASKWIDG':
       return {
-        ...state, widgets: action.payload=="true"
+        ...state, widgets: action.payload==="true"
       };
     default:
       return state;

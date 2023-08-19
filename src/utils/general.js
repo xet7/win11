@@ -181,10 +181,10 @@ export const SnapScreen = (props)=>{
           <div className="snapLay">
             {x.map(y=>(
               <div className="snapper" style={{
-                borderTopLeftRadius: (y.br%2==0)*4,
-                borderTopRightRadius: (y.br%3==0)*4,
-                borderBottomRightRadius: (y.br%5==0)*4,
-                borderBottomLeftRadius: (y.br%7==0)*4
+                borderTopLeftRadius: (y.br%2===0)*4,
+                borderTopRightRadius: (y.br%3===0)*4,
+                borderBottomRightRadius: (y.br%5===0)*4,
+                borderBottomLeftRadius: (y.br%7===0)*4
               }} onClick={clickDispatch} data-dim={JSON.stringify(y.dim)}
               data-action={props.app} data-payload="resize"></div>
             ))}

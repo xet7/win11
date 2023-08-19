@@ -28,5 +28,5 @@ export const recentApps = icons.filter(x=>recent.includes(x.name)).sort((a,b)=>{
 });;
 
 export const allApps = icons.filter(app=>{
-  return app.type=='app'
+  return app.type==='app';
 });

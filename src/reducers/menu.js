@@ -133,14 +133,14 @@ const menusReducer = (state = defState, action) => {
   var tmpState = {
     ...state
   };
-  if (action.type == "MENUHIDE") {
+  if (action.type === "MENUHIDE") {
     tmpState.hide = true;
-  } else if (action.type == "MENUSHOW") {
+  } else if (action.type === "MENUSHOW") {
     tmpState.hide = false;
     tmpState.top = (action.payload && action.payload.top) || 272;
     tmpState.left = (action.payload && action.payload.left) || 430;
     tmpState.opts = (action.payload && action.payload.menu) || "desk";
-  } else if (action.type == "MENUCHNG") {
+  } else if (action.type === "MENUCHNG") {
     tmpState = {
       ...action.payload
     };

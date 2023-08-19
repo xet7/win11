@@ -78,17 +78,17 @@ const defState = {
 };
 
 const paneReducer = (state = defState, action) => {
-  if(action.type=="PANEQBTN"){
+  if(action.type==="PANEQBTN"){
     var tmpState = {...state};
     tmpState.quicks[action.payload].state = !tmpState.quicks[action.payload].state;
     return tmpState;
-  }else if (action.type=="PANETOGG") {
+  }else if (action.type==="PANETOGG") {
     return {...state, hide: !state.hide};
-  }else if (action.type=="PANEHIDE") {
+  }else if (action.type==="PANEHIDE") {
     return {...state, hide: true};
-  }else if (action.type=="CALNTOGG") {
+  }else if (action.type==="CALNTOGG") {
     return {...state, calhide: !state.calhide};
-  }else if (action.type=="CALNHIDE") {
+  }else if (action.type==="CALNHIDE") {
     return {...state, calhide: true};
   }else{
     return state;
