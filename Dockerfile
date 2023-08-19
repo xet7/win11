@@ -1,4 +1,4 @@
-FROM node:14-alpine3.14
+FROM node:20-alpine
 
 # set working directory
 WORKDIR /usr/src/windows11/
