@@ -43,7 +43,7 @@ your insecurities of how incompetent you are. Just Why not!
 ## FAQ
 
 - How long it took?
-  - Honestly It took 2-3 days collecting assets, 2-3 planning and about 6 days programming it.
+  - From blueedgetechno: Honestly It took 2-3 days collecting assets, 2-3 planning and about 6 days programming it.
 
 
 - Did you use any UI/Library?
